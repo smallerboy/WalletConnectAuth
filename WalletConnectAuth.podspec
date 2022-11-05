@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WalletConnectAuth'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of WalletConnectAuth.'
+  s.version          = '1.0.0'
+  s.summary          = 'WalletConnect Auth'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,20 +17,23 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'WalletConnect Auth library'
 
-  s.homepage         = 'https://github.com/david zhang,/WalletConnectAuth'
+  s.homepage         = 'https://github.com/smallerboy/WalletConnectAuth'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'david zhang,' => 'zmao008@gmail.com' }
-  s.source           = { :git => 'https://github.com/david zhang,/WalletConnectAuth.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/smallerboy/WalletConnectAuth.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'WalletConnectAuth/Classes/**/*'
+
+  s.dependency 'WalletConnectPairing', '~> 1.0.1' 
+  s.dependency 'WalletConnectWeb3', '~> 1.0.1'
+
+  s.swift_version = '5'
   
   # s.resource_bundles = {
   #   'WalletConnectAuth' => ['WalletConnectAuth/Assets/*.png']
